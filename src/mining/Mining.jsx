@@ -1,7 +1,10 @@
+import "../page.css"
+
+
 export function Mining() {
     return (
-        <p>
+        <div className="page">
             Mining
-        </p>
+        </div>
     )
 }

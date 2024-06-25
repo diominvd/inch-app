@@ -1,0 +1,44 @@
+.panel-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    height: 13vh;
+    margin: 0 -1vw -1vw -1vw;
+    padding: 0 10vw;
+
+    border: 0.5vh solid #B7CFAE;
+    border-radius: 2vh 2vh 0 0;
+
+    background-color: black;
+}
+
+.link-nav {
+    display: flex;
+
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.element-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+}
+
+.icon-nav {
+    width: 3vh;
+}.active {
+     filter: brightness(0) saturate(100%) invert(98%) sepia(5%) saturate(1299%) hue-rotate(41deg) brightness(86%) contrast(86%);
+ }
+
+.icon-nav-title {
+    margin: 2vh 0 0 0;
+}.active {
+     color: #B7CFAE;
+ }

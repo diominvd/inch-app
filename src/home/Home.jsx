@@ -1,7 +1,10 @@
+import "../page.css"
+
+
 export function Home() {
     return (
-        <p>
+        <div className="page">
             Home
-        </p>
+        </div>
     )
 }

@@ -1,7 +1,10 @@
+import "../page.css"
+
+
 export function Friends() {
     return (
-        <p>
+        <div className="page">
             Friends
-        </p>
+        </div>
     )
 }
