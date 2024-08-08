@@ -1,0 +1,3 @@
+# Develop files
+node_modules
+.eslintrc.cjs
