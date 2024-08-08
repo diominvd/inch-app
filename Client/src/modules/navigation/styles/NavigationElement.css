@@ -1,0 +1,29 @@
+.navigation-element {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+
+	text-decoration: none;
+}
+
+.navigation-element__icon {
+	width: 3.2vh;
+	height: 3.2vh;
+
+	filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(333deg) brightness(104%) contrast(101%) opacity(30%);
+}
+.navigation-element.active > .navigation-element__icon {
+	filter: invert(100%) sepia(0%) saturate(7484%) hue-rotate(132deg) brightness(121%) contrast(88%);
+} 
+
+.navigation-element__name {
+	font-family: var(--font-main);
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--action-disabled);
+}
+a.navigation-element.active > p.navigation-element__name {
+	color: var(--text-primary);
+}

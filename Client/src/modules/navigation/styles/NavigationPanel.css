@@ -1,0 +1,9 @@
+.navigation-panel {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2vh 10vw 4vh 10vw;
+
+	border-top: 2px solid var(--divider);
+}
