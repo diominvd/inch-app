@@ -1,0 +1,13 @@
+:root {
+	--cell-horizontal-padding: 4vw;
+	--cell-vertical-padding: 2vh;
+	--cell-radius: 14px;
+}
+
+div.cell {
+	padding: var(--cell-vertical-padding) var(--cell-horizontal-padding);
+
+	border-radius: var(--cell-radius);
+
+	background-color: var(--background-800);
+}

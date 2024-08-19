@@ -1,0 +1,13 @@
+nav.navigation-panel {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 11vw;
+
+	padding: 3vh 0 5vh 0;
+
+	border-top: 1.2px solid var(--border-color);
+
+	background-color: var(--background-1000);
+}
