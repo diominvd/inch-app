@@ -1,16 +1,19 @@
 import React from 'react';
+
+import Loot from './components/Loot/Loot.tsx';
+import LootTimer from './components/LootTimer/LootTimer.tsx';
+
 import '../page.scss';
 
-import Button from '../../ui/Button/Button.tsx';
-
 interface ComponentProps {
-
+	// Props
 }
 
 const Home = ({  }: ComponentProps): JSX.Element => {
 	return (
 		<div className="page" id="home">
-			<Button mode="bezeled" size="small" onClick={() => console.log('click')} haptic={["notification", "success"]}>Click bleaty</Button>
+			<Loot />
+			<LootTimer />
 		</div>
 	)
 }

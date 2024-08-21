@@ -6,14 +6,14 @@ type Weights = 1 | 2 | 3
 type Colors = 'white' | 'gray' | 'black'
 
 interface ComponentProps {
-	level: Levels
-	weight: Weights
+	level?: Levels
+	weight?: Weights
 	color: Colors
-	caps: boolean
+	caps?: boolean
 	children: string
 }
 
-const Caption = ({ level, weight, color, caps, children }: ComponentProps): JSX.Element => {
+const Caption = ({ level = 1, weight = 1, color, caps, children }: ComponentProps): JSX.Element => {
 	return (
 		<span className={`caption level-${level} weight-${weight} color-${color}`}>
 			{

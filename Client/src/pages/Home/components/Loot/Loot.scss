@@ -1,0 +1,9 @@
+:root {
+	--loot-color: rgb(255, 255, 255, 0.9);
+}
+
+span.loot {
+	font-family: var(--font);
+	font-size: 5.5vh;
+	color: var(--loot-color);
+}
