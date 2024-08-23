@@ -12,6 +12,10 @@
   "dependencies": {
     "@capacitor/haptics": "^5.0.8",
     "@vkruglikov/react-telegram-web-app": "^2.1.9",
+    "@zakarliuka/react-telegram-web-tools": "^1.0.1",
+    "luxon": "^3.5.0",
+    "moment": "^2.30.1",
+    "motion-number": "^0.1.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1"

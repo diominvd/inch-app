@@ -21,9 +21,10 @@ interface ComponentProps {
 	onClick: () => void;
 	haptic?: Haptic;
 	children: string;
+	style?: Object;
 }
 
-const Button = ({ disabled, mode, before, size, children, after, haptic, onClick }: ComponentProps): JSX.Element => {
+const Button = ({ disabled, mode, before, size, children, after, haptic, onClick, style }: ComponentProps): JSX.Element => {
 	const [impactOccurred, notificationOccurred, selectionChanged] = useHapticFeedback();
   const [position, setPosition] = useState<{ x: number; y: number } | null>(null)
 
@@ -34,7 +35,7 @@ const Button = ({ disabled, mode, before, size, children, after, haptic, onClick
   }
 
 	return (
-		<button disabled={disabled} className={`${mode} ${size}`} onClick={handleClick}>
+		<button disabled={disabled} className={`${mode} ${size}`} onClick={handleClick} style={style}>
 			{
 				position && (
 					<span

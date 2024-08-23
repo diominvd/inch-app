@@ -1,5 +1,6 @@
 import React from 'react';
 import '../page.scss';
+import CellDevice from './components/CellDevice/CellDevice';
 
 interface ComponentProps {
 
@@ -8,7 +9,8 @@ interface ComponentProps {
 const Upgrades = ({  }: ComponentProps): JSX.Element => {
 	return (
 		<div className="page" id="upgrades">
-			Upgrades
+			<CellDevice title="Reactor" description="The reactor increase mining speed" meta={[1, "2.4/hour", 100]} upgradeAction={() => console.log('upgrade')} />
+			<CellDevice title="Storage" description="The storage increase mining time" meta={[1, "2.4/hour", 100]} upgradeAction={() => console.log('upgrade')} />
 		</div>
 	)
 }

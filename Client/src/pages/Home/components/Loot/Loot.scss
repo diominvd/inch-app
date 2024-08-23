@@ -7,3 +7,11 @@ span.loot {
 	font-size: 5.5vh;
 	color: var(--loot-color);
 }
+
+[data-motion-number] {
+	line-height: 0.9 !important;
+
+	font-family: var(--font);
+	font-size: 5.5vh;
+	color: var(--loot-color);
+}

@@ -5,3 +5,7 @@ div.page {
 
 	padding: 2vh 4vw;
 }
+
+div.page#home, div.page#upgrades {
+	gap: 6px;
+}
