@@ -1,4 +1,8 @@
 .vscode
 .eslintrc.cjs
+.eslintrc.js
 .env
+.prettierrc
 node_modules
+test
+serverold

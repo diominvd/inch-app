@@ -8,7 +8,7 @@ import Home from './pages/Home/Home.tsx';
 import Upgrades from './pages/Upgrades/Upgrades.tsx';
 import Tasks from './pages/Tasks/Tasks.tsx';
 import Profile from './pages/Profile/Profile.tsx';
-import NavigationPanel from './modules/NavigationPanel/NavigationPanel.tsx'
+import NavigationPanel from './modules/NavigationPanel/NavigationPanel.tsx';
 import './index.scss';
 
 import createUserData from './pages/Home/helpers/createUserData.js'
@@ -18,7 +18,7 @@ const telegram = window.Telegram.WebApp
 const userData = createUserData(telegram.initDataUnsafe)
 
 const response = axios({
-  method: 'post',
+  method: 'POST',
   url: 'http://localhost:3000/api/post/create_user',
   data: { userData }
 })
