@@ -45,7 +45,8 @@
 }
 
 * {
-  
+  margin: 0;
+  padding: 0;
 }
 
 html, body, #root {
@@ -56,6 +57,8 @@ html, body, #root {
   padding: 0;
 
   background-color: var(--background-1000);
+
+  overflow: hidden;
 }
 
 #root {

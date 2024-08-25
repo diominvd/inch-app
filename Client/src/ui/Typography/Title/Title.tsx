@@ -6,17 +6,18 @@ type Weights = 1 | 2 | 3
 type Colors = 'white' | 'gray' | 'black'
 
 interface ComponentProps {
-	level: Levels
-	weight: Weights
-	color: Colors
-	plain?: boolean
-	caps?: boolean
-	children: string
+	level: Levels;
+	weight: Weights;
+	color: Colors;
+	center?: boolean;
+	plain?: boolean;
+	caps?: boolean;
+	children: string;
 }
 
-const Title = ({ level, weight, color, plain, caps, children }: ComponentProps): JSX.Element => {
+const Title = ({ level, weight, color, center, plain, caps, children }: ComponentProps): JSX.Element => {
 	return (
-		<h2 className={`title level-${level} weight-${weight} color-${color} plain-${plain}`}>
+		<h2 className={`title level-${level} weight-${weight} color-${color} plain-${plain} center-${center}`}>
 			{
 				caps ? children.toUpperCase() : children
 			}

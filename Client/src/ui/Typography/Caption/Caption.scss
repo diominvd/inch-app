@@ -43,4 +43,8 @@ span.caption {
 	&.color-black {
 		color: var(--caption-color-black);
 	}
+
+	&.center-true {
+		text-align: center;
+	}
 }

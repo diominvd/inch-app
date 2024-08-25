@@ -33,4 +33,8 @@ span.text {
 	&.color-black {
 		color: var(--text-color-black);
 	}
+
+	&.center-true {
+		text-align: center;
+	}
 }

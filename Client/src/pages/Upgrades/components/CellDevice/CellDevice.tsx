@@ -1,43 +1,54 @@
 import React from 'react';
-import './CellDevice.scss';
-import IconFlash from '../../../../icons/IconParameter';
+
+import Headline from '../../../../ui/Typography/Headline/Headline.tsx';
+import Caption from '../../../../ui/Typography/Caption/Caption.tsx';
+import Button from '../../../../ui/Button/Button';
+import VerticalLayout from '../../../../ui/Layout/VerticalLayout/VerticalLayout.tsx';
+import HorizontalLayout from '../../../../ui/Layout/HorizontalLayout/HorizontalLayout.tsx';
+
+import IconParameter from '../../../../icons/IconParameter';
 import IconLevel from '../../../../icons/IconLevel';
 import IconCoin from '../../../../icons/IconCoin';
-import Button from '../../../../ui/Button/Button';
-import Divider from '../../../../ui/Divider/Divider';
+
+import './CellDevice.scss';
+import upgradeDevice from '../../helpers/upgradeDevice.js';
+import Badge from '../../../../ui/Badge/Badge.tsx';
 
 interface ComponentProps {
-	title: string;
+	headline: string;
 	description: string;
 	meta: [number, string, number];
 	upgradeAction: () => void;
 }
 
-const CellDevice = ({ title, description, meta, upgradeAction }: ComponentProps): JSX.Element => {
+const CellDevice = ({ headline, description, meta }: ComponentProps): JSX.Element => {
 	return (
 		<div className="cell-device">
-			<span className="title">{title}</span>
-			<span className="description">{description}</span>
-			<div className="information-wrapper">
-				<div className="information">
+			<HorizontalLayout justify="start" align="center">
+				<Headline weight={1} color="white" plain>{headline}</Headline>
+				<Badge mode="good" />
+			</HorizontalLayout>
+			<Caption weight={1} color="gray">{description}</Caption>
+			<HorizontalLayout justify="start" align="center" gap={24}>
+				<div className="attribute">
 					<IconLevel size={3} />
-					<span className="information__text">{meta[0]} level</span>
+					<Caption weight={1} color="gray">{meta[0]} level</Caption>
 				</div>
-				<div className="information">
-					<IconFlash size={3.5} />
-					<span className="information__text">{meta[1]}</span>
+				<div className="attribute">
+					<IconParameter size={3} />
+					<Caption weight={1} color="gray">{meta[1]}</Caption>
 				</div>
-				<div className="information">
+				<div className="attribute">
 					<IconCoin size={3} />
-					<span className="information__text">${meta[2]}</span>
+					<Caption weight={1} color="gray">${meta[2]}</Caption>
 				</div>
-			</div>
-			<Button 
-				mode="white" 
-				size="medium" 
-				onClick={upgradeAction}
-				haptic={["impact", "soft"]}
-				style={{marginTop: '10px', fontSize: '14px'}}
+			</HorizontalLayout>
+			<Button
+				mode="white"
+				size="medium"
+				haptic={['impact', 'soft']}
+				onClick={() => upgradeDevice(headline.toLowerCase())}
+				style={{marginTop: '6px', fontSize: '14px'}}
 			>
 				Upgrade
 			</Button>

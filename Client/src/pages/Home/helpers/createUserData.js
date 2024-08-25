@@ -1,4 +1,5 @@
 import { DateTime } from 'luxon';
+import hash from 'object-hash';
 
 const createUserData = (initDataUnsafe) => {
 	const metaData = {
@@ -21,7 +22,8 @@ const createUserData = (initDataUnsafe) => {
 		storage: 1,
 		premium: false,
 	}
-	return {metaData, appData}
+	const dataHash = hash({ metaData, appData })
+	return { hash: dataHash, metaData: metaData, appData }
 }
 
 export default createUserData;

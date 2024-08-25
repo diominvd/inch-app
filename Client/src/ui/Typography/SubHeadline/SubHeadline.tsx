@@ -1,15 +1,15 @@
 import React from 'react';
 import './SubHeadline.scss';
 
-type Weights = 1 | 2 | 3
-type Colors = 'white' | 'gray' | 'black'
+type Weights = 1 | 2 | 3;
+type Colors = 'white' | 'gray' | 'black';
 
 interface ComponentProps {
-	weight: Weights
-	color: Colors
-	plain: boolean
-	caps: boolean
-	children: string
+	weight: Weights;
+	color: Colors;
+	plain?: boolean;
+	caps?: boolean;
+	children: string;
 }
 
 const SubHeadline = ({ weight, color, plain, caps, children }: ComponentProps): JSX.Element => {
