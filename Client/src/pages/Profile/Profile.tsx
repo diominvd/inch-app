@@ -13,12 +13,14 @@ interface ComponentProps {
 
 }
 
-const telegram = window.Telegram.WebApp
-const utils = initUtils()
+// const telegram = window.Telegram.WebApp
+// const utils = initUtils()
 const invite = {
 	url: 'Become a part of the Independent Chain history with me ⚡️\n\n🇬🇧 Channel: @inch_ton\n🇷🇺 CIS Channel: @inch_ton_cis\n💬 Chat: @inch_ton_chat',
-	text: `https://t.me/pc_controller_f15_bot/inchapptesttest?startapp=${telegram.initDataUnsafe.user.id}`, 
+	text: `https://t.me/pc_controller_f15_bot/inchapptesttest?startapp=${12345}`, 
 }
+
+//telegram.initDataUnsafe.user.id
 
 const Profile = ({  }: ComponentProps): JSX.Element => {
 	return (

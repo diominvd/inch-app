@@ -9,11 +9,21 @@ import HorizontalLayout from '../../../../ui/Layout/HorizontalLayout/HorizontalL
 import './Loot.scss';
 
 interface ComponentProps {
-	// Props
+	lastClaimTime: Date,
+	reactor: number,
+	storage: number,
 }
 
-const Loot = ({ }: ComponentProps): JSX.Element => {
-	const [loot, setLoot] = useState(calculateLoot())
+const Loot = ({ lastClaimTime, reactor, storage }: ComponentProps): JSX.Element => {
+	const [loot, setLoot] = useState(0)
+	
+	useEffect(() => {
+		const lootIntervalId = setInterval(() => {
+      setLoot(calculateLoot(lastClaimTime, reactor, storage))
+    }, 1000);
+
+		return () => clearInterval(lootIntervalId);
+	}, [])
 
 	return (
 		<HorizontalLayout justify="center" align="center">
